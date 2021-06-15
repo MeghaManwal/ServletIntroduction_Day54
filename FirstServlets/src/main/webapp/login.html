@@ -1,17 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login Page</title>
-</head>
-<body>
-     <form action = "LoginServlet" method="post">
-          UserName:<input type="text" name="user" pattern="^[A-Z]{1}[A-Z a-z]{2,}$" 
-                    title="Password must Contains First letter in uppercase and rest in lowercase and contains atleast 3 characters">
-          <br>
-          Password:<input type="password" name="pwd">
-          <br>
-          <input type="submit" value="Login">
-     </form>
-</body>
+     <head>
+            <meta charset="ISO-8859-1">
+            <title>Login Page</title>
+     </head>
+     <body>
+         <form action = "LoginServlet" method="post">
+              UserName:<input type="text" name="user" pattern="^[A-Z]{1}[A-Z a-z]{2,}$" 
+                       title="Password must Contains First letter in uppercase and rest in lowercase and contains atleast 3 characters">
+              <br>
+              Password:<input type="password" name="pwd" pattern="^(?=[0-9 A-Z a-z !@#$%^&*();:]{8,}$)(?=.*?[A-Z]{1,})(?=.*?[0-9]{1,})(?=.*?[!@#$%^&*();:]{1,}).*$" 
+                        title="Password must contains atleast one number and one uppercase and lowercase letter, and at least 8 or more characters">
+              <br>
+              <input type="submit" value="Login">
+        </form>
+    </body>
 </html>
