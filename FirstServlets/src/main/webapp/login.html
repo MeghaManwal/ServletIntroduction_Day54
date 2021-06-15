@@ -5,14 +5,13 @@
 <title>Login Page</title>
 </head>
 <body>
-
-<form action = "LoginServlet" method="post">
-UserName:<input type="text" name="user">
-<br>
-Password:<input type="password" name="pwd">
-<br>
-<input type="submit" value="Login">
-</form>
-
+     <form action = "LoginServlet" method="post">
+          UserName:<input type="text" name="user" pattern="^[A-Z]{1}[A-Z a-z]{2,}$" 
+                    title="Password must Contains First letter in uppercase and rest in lowercase and contains atleast 3 characters">
+          <br>
+          Password:<input type="password" name="pwd">
+          <br>
+          <input type="submit" value="Login">
+     </form>
 </body>
 </html>
